@@ -23,7 +23,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import prog0.com.jfacedetection.utils.ImagesUtils;
+import com.github.kvac.jfacedetection.utils.ImagesUtils;
 
 public class JFaceDetectionInit {
 
