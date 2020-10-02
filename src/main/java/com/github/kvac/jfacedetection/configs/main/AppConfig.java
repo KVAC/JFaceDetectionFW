@@ -7,5 +7,4 @@ public class AppConfig {
 
     @Getter
     ServicesConfig servicesConfig = new ServicesConfig();
-
 }
