@@ -113,8 +113,10 @@ public class JFaceDetectionInit {
                     }
                 }//SAVE ORIGINAL
 
+                if (isRectangles && isPainted) {
+                    logger.info("red:" + red + " green:" + green + " blue:" + blue + " thickness:" + thickness);
+                }
                 while (true) {
-                    logger.info("NEW GRAB");
                     Frame image = frameGrabber.grabImage();
                     //Frame image = frameGrabber.grabImage();//FFMPEG
                     MatOfRect objectsTo = new MatOfRect();
@@ -141,9 +143,6 @@ public class JFaceDetectionInit {
 
                         logger.info(String.format("Detected faces: %d", objectsTo.toArray().length));
 
-                        if (isRectangles && isPainted) {
-                            logger.info("red:" + red + " green:" + green + " blue:" + blue + " thickness:" + thickness);
-                        }
                         Rect[] rects = objectsTo.toArray();
                         for (int i = 0; i < rects.length; i++) {
                             Rect origRect = rects[i];
